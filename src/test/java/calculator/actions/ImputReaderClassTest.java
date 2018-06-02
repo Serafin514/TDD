@@ -15,4 +15,5 @@ public class ImputReaderClassTest {
         //than
         Assert.assertEquals(readerClass,equationModel);
     }
+
 }
