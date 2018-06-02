@@ -1,5 +1,7 @@
 package calculator.actions;
 
+
+
 public class EquationModel {
     private double aDouble;
     private double bDouble;
@@ -34,6 +36,16 @@ public class EquationModel {
 
     public void setaChar(char aChar) {
         this.aChar = aChar;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        EquationModel that = (EquationModel) o;
+        return Double.compare(that.aDouble, aDouble) == 0 &&
+                Double.compare(that.bDouble, bDouble) == 0 &&
+                aChar == that.aChar;
     }
 
 }
